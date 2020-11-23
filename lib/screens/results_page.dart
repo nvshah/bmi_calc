@@ -23,6 +23,7 @@ class ResultsPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
+          //TITLE
           Expanded(
             child: Container(
               padding: EdgeInsets.all(15.0),
