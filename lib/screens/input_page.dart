@@ -86,13 +86,17 @@ class _InputPageState extends State<InputPage> {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
+                    //baseline so that alphabets are align down the line i.e baseline
                     crossAxisAlignment: CrossAxisAlignment.baseline,
+                    //to keep text align on the baseline
                     textBaseline: TextBaseline.alphabetic,
                     children: <Widget>[
+                      //Value
                       Text(
                         height.toString(),
                         style: kNumberTextStyle,
                       ),
+                      //metric-(measurements)
                       Text(
                         'cm',
                         style: kLabelTextStyle,
@@ -128,6 +132,7 @@ class _InputPageState extends State<InputPage> {
               ),
             ),
           ),
+          //WEIGHT
           Expanded(
             child: Row(
               children: <Widget>[
@@ -145,6 +150,7 @@ class _InputPageState extends State<InputPage> {
                           weight.toString(),
                           style: kNumberTextStyle,
                         ),
+                        //STEP DOWN & STEP UP BUTTONS
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
@@ -152,7 +158,7 @@ class _InputPageState extends State<InputPage> {
                             RoundIconButton(
                                 icon: FontAwesomeIcons.minus,
                                 //Even though we pass setState() to Stateless Widget - RoundIconButton,
-                                //It will look for nearest StateFulWidget & 
+                                //It will look for nearest StateFulWidget &
                                 onPressed: () {
                                   setState(() {
                                     weight--;
@@ -175,6 +181,7 @@ class _InputPageState extends State<InputPage> {
                     ),
                   ),
                 ),
+                //AGE
                 Expanded(
                   child: ReusableCard(
                     colour: kActiveCardColour,
@@ -222,11 +229,14 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
+          //CALCULATE BUTTON
           BottomButton(
             buttonTitle: 'CALCULATE',
             onTap: () {
-              CalculatorBrain calc =
-                  CalculatorBrain(height: height, weight: weight);
+              CalculatorBrain calc = CalculatorBrain(
+                height: height,
+                weight: weight,
+              );
               //RESULT PAGE
               Navigator.push(
                 context,

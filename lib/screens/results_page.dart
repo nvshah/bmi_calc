@@ -59,6 +59,7 @@ class ResultsPage extends StatelessWidget {
               ),
             ),
           ),
+          //Go back to Input page to recalculate
           BottomButton(
             buttonTitle: 'RE-CALCULATE',
             onTap: () {

@@ -7,12 +7,14 @@ class CalculatorBrain {
   final int weight;
 
   double _bmi;
-
+   
+  ///calculate bmi value based on height and weight
   String calculateBMI() {
     _bmi = weight / pow(height / 100, 2);
     return _bmi.toStringAsFixed(1);
   }
-
+  
+  ///get evaluated category based on bmi value
   String getResult() {
     if (_bmi >= 25) {
       return 'Overweight';
@@ -22,7 +24,8 @@ class CalculatorBrain {
       return 'Underweight';
     }
   }
-
+  
+  ///get statement based on your bmi value
   String getInterpretation() {
     if (_bmi >= 25) {
       return 'You have a higher than normal body weight. Try to exercise more.';

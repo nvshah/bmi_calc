@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//generally k is used as first letter to denote konstant
 const kBottomContainerHeight = 80.0;
 const kActiveCardColour = Color(0xFF1D1E33);
 const kInactiveCardColour = Color(0xFF111328);
